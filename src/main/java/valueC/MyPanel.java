@@ -1,13 +1,9 @@
 package valueC;
 
-import com.sun.deploy.security.SelectableSecurityManager;
+import valueC.utils.ComboBoxUtil;
 
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
 import java.awt.*;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import java.util.Map;
 
 public class MyPanel extends JPanel
@@ -88,77 +84,5 @@ public class MyPanel extends JPanel
         comboBoxes.setBoxInit(boxInit.getSelectedItem().toString());
         comboBoxes.setBoxFin(boxFin.getSelectedItem().toString());
         return comboBoxes;
-    }
-
-    public void exeConversion(String textField, String startText, String endText, Double startRate, Double endRate) {
-        Double toConvert;
-        try{
-            if(textField.equals("start"))
-            {
-                toConvert = Double.valueOf(startText);
-                Double converted=getConversion(toConvert,startRate,endRate);
-                setTextField(converted.toString(),textField);
-            }
-            else
-            {
-                toConvert = Double.valueOf(endText);
-                Double converted=getConversion(toConvert,endRate,startRate);
-                setTextField(converted.toString(),textField);
-            }
-
-        }
-        catch(NumberFormatException e){
-            setTextField("0",textField);
-        }
-    }
-    public Double getConversion(Double toConvert, Double startCoef, Double endCoef)
-    {
-        return (1/startCoef*toConvert)*endCoef;
-    }
-    public void setTextField(String converted, String textField)
-    {
-        if(textField.equals("start"))
-        {
-            try
-            {
-                endTextField.setText(converted);
-            }
-            catch(IllegalStateException e)
-            {
-                System.out.println("Caught Start");
-            }
-        }
-        else
-        {
-            try
-            {
-                startTextField.setText(converted);
-            }
-            catch(IllegalStateException e)
-            {
-                System.out.println("Caught End");
-            }
-        }
-    }
-    private class TextChangeListener implements DocumentListener
-    {
-        String textField;
-        public TextChangeListener(String textField)
-        {
-            this.textField=textField;
-        }
-        @Override
-        public void insertUpdate(DocumentEvent e) { exeConversion(textField); }
-
-        @Override
-        public void removeUpdate(DocumentEvent e) { exeConversion(textField); }
-
-        @Override
-        public void changedUpdate(DocumentEvent e) { exeConversion(textField); }
-    }
-    private class ItemChangeListener implements ItemListener
-    {
-        @Override
-        public void itemStateChanged(ItemEvent e) { exeConversion("start"); }
     }
 }

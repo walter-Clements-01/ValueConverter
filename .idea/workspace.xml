@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71dcc8-f21e-47d7-bb93-4b2cc269a5b3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ValueConverter/valueC/MyPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ValueConverter/valueC/MyPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ValueConverter/valueC/MyPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ValueConverter/valueC/MyPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ValueConverter/valueC/TextChangeListener.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/valueC/ItemChangeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/valueC/TextChangeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/valueC/utils/ConversionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/valueC/ComboBoxUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/valueC/utils/ComboBoxUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/valueC/MyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/valueC/MyFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/valueC/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/valueC/MyPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +57,7 @@
       <module name="ValueConverter" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="valueC.*" />
+          <option name="PATTERN" value="valueC.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -69,7 +70,7 @@
       <module name="ValueConverter" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="valueC.*" />
+          <option name="PATTERN" value="valueC.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,6 +135,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584893773759" />
+    <state x="403" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585166160906">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="403" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1585166160906" />
     <state x="424" y="6" key="CommitChangelistDialog2" timestamp="1584901861822">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
