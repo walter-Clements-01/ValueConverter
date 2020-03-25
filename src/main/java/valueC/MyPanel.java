@@ -23,12 +23,12 @@ public class MyPanel extends JPanel
     private JPanel bottomPanel;
     private CurrenciesRetriever currenciesRetriever;
     private Currencies currencies;
-    private Map<String, Double> rates;
+    //private Map<String, Double> rates;
     private Map<String, Double> names;
     public MyPanel() throws Exception {
         currenciesRetriever = new CurrenciesRetriever();
         currencies = currenciesRetriever.getCurrencies();
-        rates=currencies.getRates();
+        //rates=currencies.getRates();
         names=currencies.getRatesNames();
 
         topPanel = new JPanel(new GridLayout(1,2,20,20));
@@ -90,19 +90,19 @@ public class MyPanel extends JPanel
         return comboBoxes;
     }
 
-    public void exeConversion(String textField) {
+    public void exeConversion(String textField, String startText, String endText, Double startRate, Double endRate) {
         Double toConvert;
         try{
             if(textField.equals("start"))
             {
-                toConvert = Double.valueOf(startTextField.getText());
-                Double converted=getConversion(toConvert,names.get(boxInit.getSelectedItem().toString()),names.get(boxFin.getSelectedItem().toString()));
+                toConvert = Double.valueOf(startText);
+                Double converted=getConversion(toConvert,startRate,endRate);
                 setTextField(converted.toString(),textField);
             }
             else
             {
-                toConvert = Double.valueOf(endTextField.getText());
-                Double converted=getConversion(toConvert,names.get(boxFin.getSelectedItem().toString()),names.get(boxInit.getSelectedItem().toString()));
+                toConvert = Double.valueOf(endText);
+                Double converted=getConversion(toConvert,endRate,startRate);
                 setTextField(converted.toString(),textField);
             }
 

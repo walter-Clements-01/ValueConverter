@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca71dcc8-f21e-47d7-bb93-4b2cc269a5b3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boxes.ser" beforeDir="false" afterPath="$PROJECT_DIR$/boxes.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ValueConverter/valueC/MyPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ValueConverter/valueC/MyPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ValueConverter/valueC/MyPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ValueConverter/valueC/MyPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ValueConverter/valueC/TextChangeListener.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/valueC/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/valueC/MyPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/valueC/TextChangeListener.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +107,19 @@
       <option name="presentableId" value="Default" />
       <updated>1582648822353</updated>
     </task>
+    <task id="LOCAL-00001" summary="added JComboBox listener&#10;added 2nd JTextField conversion&#10;modified graphics">
+      <created>1584901862521</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584901862522</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added JComboBox listener&#10;added 2nd JTextField conversion&#10;modified graphics" />
+    <option name="LAST_COMMIT_MESSAGE" value="added JComboBox listener&#10;added 2nd JTextField conversion&#10;modified graphics" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="70" key="#Project_Structure" timestamp="1582649250843">
@@ -122,30 +134,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584893773759" />
-    <state x="424" y="6" key="CommitChangelistDialog2" timestamp="1584894164226">
+    <state x="424" y="6" key="CommitChangelistDialog2" timestamp="1584901861822">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="424" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584894164226" />
+    <state x="424" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584901861822" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1584632594036">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584632594036" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1584901615760">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585161256070">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584901615760" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1584901615760">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585161256070" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585161256070">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584901615760" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1584901615760">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585161256070" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585161256070">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584901615760" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1584901615760">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585161256070" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585161256070">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584901615760" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585161256070" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1582650620712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -154,10 +166,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1582740121106" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1584893287798">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1584901874131">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584893287798" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584901874131" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1585160865912">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585160865912" />
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584894149089">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
