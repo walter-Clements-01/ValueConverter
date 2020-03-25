@@ -1,0 +1,4 @@
+out
+
+# Ignore .idea directory ( don't want to share IDE files )
+.idea
