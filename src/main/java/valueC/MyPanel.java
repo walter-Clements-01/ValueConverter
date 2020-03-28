@@ -19,12 +19,10 @@ public class MyPanel extends JPanel
     private JPanel bottomPanel;
     private CurrenciesRetriever currenciesRetriever;
     private Currencies currencies;
-    //private Map<String, Double> rates;
     private Map<String, Double> names;
     public MyPanel() throws Exception {
         currenciesRetriever = new CurrenciesRetriever();
         currencies = currenciesRetriever.getCurrencies();
-        //rates=currencies.getRates();
         names=currencies.getRatesNames();
 
         topPanel = new JPanel(new GridLayout(1,2,20,20));
@@ -64,10 +62,10 @@ public class MyPanel extends JPanel
         add(middlePanel);
         add(bottomPanel);
 
-        boxInit.addItemListener(new ItemChangeListener());
-        boxFin.addItemListener(new ItemChangeListener());
-        startTextField.getDocument().addDocumentListener(new TextChangeListener("start"));
-        endTextField.getDocument().addDocumentListener(new TextChangeListener("end"));
+        boxInit.addItemListener(new ItemChangeListener(startTextField,endTextField,names,boxInit,boxFin,"start"));
+        boxFin.addItemListener(new ItemChangeListener(startTextField,endTextField,names,boxInit,boxFin,"end"));
+        startTextField.getDocument().addDocumentListener(new TextChangeListener(startTextField,endTextField,names,boxInit,boxFin,"start"));
+        endTextField.getDocument().addDocumentListener(new TextChangeListener(startTextField,endTextField,names,boxInit,boxFin,"end"));
     }
    public void setComboBoxes() throws Exception {
        for (Map.Entry<String, Double> entry : names.entrySet()) {

@@ -12,27 +12,67 @@ public class TextChangeListener implements DocumentListener
     private JTextField startTextField;
     private JTextField endTextField;
     private Map<String, Double> names;
+    private JComboBox boxInit;
+    private JComboBox boxFin;
+    private String direction;
 
-    public TextChangeListener(String direction)
+    private String startText;
+    private Double startRate;
+    private Double endRate;
+
+    public TextChangeListener(JTextField startTextField, JTextField endTextField, Map<String, Double> names, JComboBox boxInit, JComboBox boxFin, String direction)
     {
-
+        this.startTextField=startTextField;
+        this.endTextField=endTextField;
+        this.names=names;
+        this.boxInit=boxInit;
+        this.boxFin=boxFin;
+        this.direction=direction;
     }
     @Override
-    public void insertUpdate(DocumentEvent e) { ConversionUtil.exeConversion(); }
+    public void insertUpdate(DocumentEvent e) {
+        setStatus();
+        String convertedText=ConversionUtil.exeConversion(startText,startRate,endRate);
+        setTextField(convertedText,direction);
+    }
 
     @Override
-    public void removeUpdate(DocumentEvent e) { ConversionUtil.exeConversion(); }
+    public void removeUpdate(DocumentEvent e) {
+        setStatus();
+        String convertedText=ConversionUtil.exeConversion(startText,startRate,endRate);
+        setTextField(convertedText,direction);
+    }
 
     @Override
-    public void changedUpdate(DocumentEvent e) { ConversionUtil.exeConversion(); }
+    public void changedUpdate(DocumentEvent e) {
+        setStatus();
+        String convertedText=ConversionUtil.exeConversion(startText,startRate,endRate);
+        setTextField(convertedText,direction);
+    }
 
-    public void setTextField(String converted, String direction)
+    private void setStatus()
+    {
+        if(direction.equals("start"))
+        {
+            startText=startTextField.getText();
+            startRate=names.get(boxInit.getSelectedItem().toString());
+            endRate=names.get(boxFin.getSelectedItem().toString());
+        }
+        else
+        {
+            startText=endTextField.getText();
+            startRate=names.get(boxFin.getSelectedItem().toString());
+            endRate=names.get(boxInit.getSelectedItem().toString());
+        }
+    }
+
+    private void setTextField(String convertedText, String direction)
     {
         if(direction.equals("start"))
         {
             try
             {
-                endTextField.setText(converted);
+                endTextField.setText(convertedText);
             }
             catch(IllegalStateException e)
             {
@@ -43,7 +83,7 @@ public class TextChangeListener implements DocumentListener
         {
             try
             {
-                startTextField.setText(converted);
+                startTextField.setText(convertedText);
             }
             catch(IllegalStateException e)
             {
