@@ -8,7 +8,7 @@ public class ConversionUtil {
         try {
             toConvert = Double.valueOf(startText);
             Double converted = getConversion(toConvert, startRate, endRate);
-            convertedText = converted.toString();
+            convertedText = String.format("%.3f", converted).replace(",",".");
         } catch (NumberFormatException e) {
             convertedText = "0";
         }
@@ -16,7 +16,7 @@ public class ConversionUtil {
     }
 
     public static Double getConversion(Double toConvert, Double startCoef, Double endCoef) {
-        return (1 / startCoef * toConvert) * endCoef;
+        return ((1 / startCoef * toConvert) * endCoef);
     }
 
 }

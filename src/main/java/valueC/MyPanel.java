@@ -62,10 +62,10 @@ public class MyPanel extends JPanel
         add(middlePanel);
         add(bottomPanel);
 
-        boxInit.addItemListener(new ItemChangeListener(startTextField,endTextField,names,boxInit,boxFin,"start"));
-        boxFin.addItemListener(new ItemChangeListener(startTextField,endTextField,names,boxInit,boxFin,"end"));
-        startTextField.getDocument().addDocumentListener(new TextChangeListener(startTextField,endTextField,names,boxInit,boxFin,"start"));
-        endTextField.getDocument().addDocumentListener(new TextChangeListener(startTextField,endTextField,names,boxInit,boxFin,"end"));
+        boxInit.addItemListener(new ItemChangeListener(startTextField,endTextField,names,boxInit,boxFin));
+        boxFin.addItemListener(new ItemChangeListener(endTextField,startTextField,names,boxFin,boxInit));
+        startTextField.getDocument().addDocumentListener(new TextChangeListener(startTextField,endTextField,names,boxInit,boxFin));
+        endTextField.getDocument().addDocumentListener(new TextChangeListener(endTextField,startTextField,names,boxFin,boxInit));
     }
    public void setComboBoxes() throws Exception {
        for (Map.Entry<String, Double> entry : names.entrySet()) {

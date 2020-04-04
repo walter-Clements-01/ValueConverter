@@ -14,68 +14,54 @@ public class ItemChangeListener implements ItemListener {
     private Map<String, Double> names;
     private JComboBox boxInit;
     private JComboBox boxFin;
-    private String direction;
 
     private String startText;
     private Double startRate;
     private Double endRate;
 
-    public ItemChangeListener(JTextField startTextField, JTextField endTextField, Map<String, Double> names, JComboBox boxInit, JComboBox boxFin, String direction)
+    public ItemChangeListener(JTextField startTextField, JTextField endTextField, Map<String, Double> names, JComboBox boxInit, JComboBox boxFin)
     {
         this.startTextField=startTextField;
         this.endTextField=endTextField;
         this.names=names;
         this.boxInit=boxInit;
         this.boxFin=boxFin;
-        this.direction=direction;
     }
 
     @Override
     public void itemStateChanged(ItemEvent e) {
         setStatus();
         String convertedText= ConversionUtil.exeConversion(startText,startRate,endRate);
-        setTextField(convertedText,direction);
+        setTextField(convertedText);
     }
 
     private void setStatus()
     {
-        if(direction.equals("start"))
-        {
-            startText=startTextField.getText();
-            startRate=names.get(boxInit.getSelectedItem().toString());
-            endRate=names.get(boxFin.getSelectedItem().toString());
-        }
+       /*if(direction.equals("start"))
+        {*/
+        startText=startTextField.getText();
+        startRate=names.get(boxInit.getSelectedItem().toString());
+        endRate=names.get(boxFin.getSelectedItem().toString());
+        /*}
         else
         {
             startText=endTextField.getText();
             startRate=names.get(boxFin.getSelectedItem().toString());
             endRate=names.get(boxInit.getSelectedItem().toString());
-        }
+        }*/
     }
 
-    private void setTextField(String convertedText, String direction)
+    private void setTextField(String convertedText)
     {
-        if(direction.equals("start"))
+        /*if(direction.equals("start"))
+        {*/
+        try
         {
-            try
-            {
-                endTextField.setText(convertedText);
-            }
-            catch(IllegalStateException e)
-            {
-                System.out.println("Caught Start");
-            }
+            endTextField.setText(convertedText);
         }
-        else
+        catch(IllegalStateException e)
         {
-            try
-            {
-                startTextField.setText(convertedText);
-            }
-            catch(IllegalStateException e)
-            {
-                System.out.println("Caught End");
-            }
+            System.out.println("Caught Start");
         }
     }
 }
